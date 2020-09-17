@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* Custom Properties, update these for your own design */
 
 :root {
@@ -15,7 +19,12 @@
   
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent:linear-gradient(
+    to right,
+    #29ffc6,
+    #20e3b2,
+    #0cebeb
+  );
   
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -115,7 +124,10 @@ h3 { font-size: var(--fs-h3) }
 
 /* header */
 
-nav { display: none; }
+.nav-toggle{
+  display: none;
+}
+
 
 /*  Intro section  */
 
@@ -123,11 +135,13 @@ nav { display: none; }
   position: relative;
   display: grid;
   align-self: center;
+  margin-top: 10em;
 }
 
 .intro__img {
   /* box-shadow: var(--bs); */
 }
+
 
 .section__subtitle--intro {
   display: inline-block;
@@ -164,8 +178,17 @@ nav { display: none; }
 }
 
 
-
 /* about-me */
+
+.section__subtitle--about{
+  overflow: hidden;
+  animation: slide 1s ease;
+}
+
+@keyframes slide{
+  0% { width:  0;}
+  100% {width: 100%;}
+}
 
 .my-info{
   margin-bottom: 2em;
@@ -178,6 +201,12 @@ nav { display: none; }
 }
 
 /* my work   */
+
+.section__title--work, 
+.section__title--contact{
+  text-align: center;
+  padding: 0.3em;
+}
 
 .portfolio__item{
   position: relative;
@@ -348,6 +377,59 @@ fieldset {
 
 @media (min-width: 600px) {
 
+  /* header */
+
+  .nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 100;
+  }
+  
+  .nav__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0.5em;
+    position: relative;
+    padding: 0 7em;
+  }
+  
+  
+  .nav__item{
+    border:none;
+    position: relative;
+  }
+  .nav__item:hover{
+    border: none;
+  }
+  
+  .nav__link{
+    font-weight: 400;
+    font-size: 1.2em;
+  }
+
+  .nav_link_js{
+    font-weight: 700;
+  }
+  
+  .nav__link::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    left: 150%;
+    right: 150%;
+    display: block;
+    background-color: var(--clr-dark);
+    transition: all ease-in-out .2s;
+  }
+  .nav__link:hover::after{
+    width: 100%;
+    left: 0;
+  }
+
   /* intro */
 
   .intro {
@@ -356,6 +438,7 @@ fieldset {
     margin: 0 auto;
     grid-column-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5em;
   }
   
   .section_blank--intro{
@@ -377,7 +460,7 @@ fieldset {
     display: grid;
     grid-column-gap: 1em;
     grid-template-columns: 1fr 1fr;
-    margin: 0 7%;
+    margin: 5em 7%;
   }
 
   .skills{
