@@ -6,24 +6,50 @@
     let contactEle = document.querySelector('.nav__link--contact');
     let workEle = document.querySelector('.nav__link--work');
     let resumeEle = document.querySelector('.nav__link--resume');
-
+    let navToggleEle = document.querySelector('.nav-toggle');
+    let navEle = document.querySelector('.nav');
+    let hamburger = document.querySelectorAll('.hamburger')
     var path = window.location.pathname;
     var page = path.split("/").pop();
+
     
+
+    window.addEventListener('scroll', () =>{
+      let yheight = window.scrollY;
+      console.log(yheight)
+      if(yheight > 40){
+        navEle.classList.add('nav--color')
+      }else{
+        navEle.classList.remove('nav--color')
+      }
+    })
+
+    navToggleEle.addEventListener('click', () =>{
+      document.body.classList.toggle('nav__show');
+      hamburger.forEach(element => {
+        element.classList.toggle('hamburger__cross')
+      });
+
+    })
+
+    navEle.addEventListener('click', (ele) => {
+      navEle.classList.add('nav--color')
+    })
+
     if(page === 'index.html'){
-      homeEle.classList.add('nav_link_js')
+      homeEle.classList.add('nav_link_js');
     }
     if(page === 'about.html'){
-      aboutEle.classList.add('nav_link_js')
+      aboutEle.classList.add('nav_link_js');
     }
     if(page === 'work.html'){
-      workEle.classList.add('nav_link_js')
+      workEle.classList.add('nav_link_js');
     }
     if(page === 'contact.html'){
-      contactEle.classList.add('nav_link_js')
+      contactEle.classList.add('nav_link_js');
     }
     if(page === 'resume.html'){
-      resumeEle.classList.add('nav_link_js')
+      resumeEle.classList.add('nav_link_js');
     }
 
  });
