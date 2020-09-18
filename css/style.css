@@ -55,6 +55,7 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
+  height: 100vh;
 }
 
 ul {
@@ -76,7 +77,10 @@ img {
   height: auto;
 }
 
-
+footer p{
+  padding-top: 2em;
+  text-align: center;
+}
 
 strong { font-weight: var(--fw-bold) }
 
@@ -371,6 +375,19 @@ fieldset {
 }
 
 @media (max-width: 700px){
+
+  section {
+    padding: 1em 1em;
+  }
+
+  footer p{
+    padding-top: 2em;
+  }
+
+  #footer__intro{
+    padding-top: 9.5em;
+  }
+
   /* header */
 
   .nav-toggle{
@@ -454,6 +471,10 @@ fieldset {
 @media (min-width: 700px) {
 
   /* header */
+
+  #footer__intro{
+    padding-top: 8em;
+  }
 
   .nav{
     position: fixed;
