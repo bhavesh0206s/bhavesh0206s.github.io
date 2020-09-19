@@ -16,7 +16,6 @@
 
     window.addEventListener('scroll', () =>{
       let yheight = window.scrollY;
-      console.log(yheight)
       if(yheight > 40){
         navEle.classList.add('nav--color')
       }else{
