@@ -199,6 +199,19 @@ h3 { font-size: var(--fs-h3) }
   vertical-align: top;
 }
 
+.skill_subsection{
+  position: absolute;
+  z-index: 10;
+  padding: 0.5rem 1em;
+  background-color: white;
+  position: relative;
+  margin: -4em 0.5em 0em 0.5em
+}
+
+.skill_subsection h3{
+  text-align: center;
+}
+
 /* my work   */
 
 .section__title--work, 
@@ -466,6 +479,17 @@ fieldset {
     color: var(--clr-light);
   }
 
+  .skill-sub{
+    display: grid;
+    column-gap: 1.5em;
+    row-gap: 2em;
+    grid-template-columns: 1fr;
+  } 
+  
+  .skill_subsection{
+    margin: -8em 0.5em 0em 0.5em
+  }
+
 }
 
 @media (min-width: 700px) {
@@ -568,8 +592,12 @@ fieldset {
     margin: 0em 7%;
   }
 
-  .skills{
-  }
+  .skill-sub{
+    display: grid;
+    column-gap: 1.5em;
+    row-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+  } 
 
   .skills-list{
     display: inline-block;
