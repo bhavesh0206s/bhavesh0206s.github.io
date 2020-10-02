@@ -12,10 +12,13 @@
     var path = window.location.pathname;
     var page = path.split("/").pop();
 
-    
 
     window.addEventListener('scroll', () =>{
       let yheight = window.scrollY;
+      document.body.classList.remove('nav__show');
+      hamburger.forEach(element => {
+        element.classList.remove('hamburger__cross')
+      });
       if(yheight > 40){
         navEle.classList.add('nav--color')
       }else{

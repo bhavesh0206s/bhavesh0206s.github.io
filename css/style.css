@@ -20,7 +20,7 @@ html{
   --fw-bold: 900;
   
   --clr-light: #fff;
-  --clr-dark: #303030;
+  --clr-dark: #00213F;
   --clr-accent:linear-gradient(
     to right,
     #29ffc6,
@@ -49,13 +49,16 @@ html{
 /* General styles */
 
 body {
-  background: var(--clr-light);
+  background-image: url(/img/back.png);
+  background-size: cover;
+  background-color: var(--clr-light);
+  background-repeat: no-repeat;
   color: var(--clr-dark);
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
-  height: 100vh;
+  height: 100%; 
 }
 
 ul {
@@ -68,13 +71,14 @@ a {
 } 
 
 section {
-  padding: 4em 1em;
+  padding: 4em 1em 0.4em 1em;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+  border-radius: 1em;
 }
 
 footer p{
@@ -175,6 +179,24 @@ h3 { font-size: var(--fs-h3) }
 
 /* about-me */
 
+.about-me__body{
+  background-image: url(/img/port2.png);
+  z-index: 10;
+  padding: 0.5rem 1.5em;
+  background-color: var(--clr-light);
+  position: relative;
+  /* color: var(--clr-light); */
+  box-shadow: var(--bs);
+  border-radius: 1em;
+}
+
+.about-me__body p {
+  font-size: 1.1em;
+  margin: 1em 0.2em;
+  font-weight: 600;
+  opacity: .9;
+}
+
 .section__title--about{
   padding: 0.3em;
 }
@@ -200,16 +222,24 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .skill_subsection{
-  position: absolute;
+  background-image: url(/img/port2.png);
   z-index: 10;
-  padding: 0.5rem 1em;
-  background-color: white;
+  padding: 0.5rem 1.5em;
+  /* background-color: var(--clr-dark); */
   position: relative;
-  margin: -4em 0.5em 0em 0.5em
+  /* color: var(--clr-light); */
+  box-shadow: var(--bs);
+  border-radius: 1em;
 }
 
 .skill_subsection h3{
   text-align: center;
+}
+
+.skill_subsection ul{
+  margin-left: 1em;
+  list-style-type: '\1F449' ;
+  font-weight: bold;
 }
 
 /* my work   */
@@ -234,6 +264,7 @@ h3 { font-size: var(--fs-h3) }
 
 .portfolio__img-container{
   position: relative;
+  border-radius: 1em;
 }
 
 .portfolio__img--overlay{
@@ -245,6 +276,7 @@ h3 { font-size: var(--fs-h3) }
   opacity: .5;
   transition: .5s ease;
   background-color: #000000;
+  border-radius: 1em;
 }
 
 .portfolio__img--overlay:hover{
@@ -259,6 +291,9 @@ h3 { font-size: var(--fs-h3) }
   position: relative;
   margin: -4em 0.5em 0em 0.5em;
   box-shadow: var(--bs);
+  border-radius: 1em;
+  background-image: url(/img/port2.png);
+  /* background-color: var(--clr-dark); */
 }
 
 .portfolio__btn{
@@ -270,7 +305,8 @@ h3 { font-size: var(--fs-h3) }
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  transition: 0.5s ease;
+  transition: 0.4s ease;
+  border-radius: 1em;
 }
 
 .portfolio__btn:hover{
@@ -278,11 +314,6 @@ h3 { font-size: var(--fs-h3) }
   background-color: var(--clr-dark); /* Green */
   border: 1px solid var(--clr-light);
   color: var(--clr-light);
-  padding: 0.5em 1em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
 }
 
 #contact {
@@ -292,6 +323,9 @@ h3 { font-size: var(--fs-h3) }
   padding: 2em;
   margin: 2em 0;
   box-shadow: var(--bs);
+  /* box-shadow: var(--bs); */
+  border-radius: 1em;
+  background-image: url(/img/port2.png);
 }
 
 #contact p{
@@ -380,8 +414,6 @@ fieldset {
   border: 1px solid #aaa;
 }
 
-
-
 .contacts__list i {
   font-size: 1.2em;
   padding: 0.5em;
@@ -423,14 +455,14 @@ fieldset {
     border-radius: 3px;
     margin: 0.3em 0;
     transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
   }
 
   .hamburger__cross{
     opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
+    transform: rotate(45deg) translate(-3px, 0px);
     background-color: var(--clr-light);
   }
 
@@ -468,6 +500,7 @@ fieldset {
     z-index: 99;
     transform-origin: 0% 0%;
     background-color: var(--clr-dark);
+    background-image: url(/img/port2.png);
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
@@ -485,10 +518,6 @@ fieldset {
     row-gap: 2em;
     grid-template-columns: 1fr;
   } 
-  
-  .skill_subsection{
-    margin: -8em 0.5em 0em 0.5em
-  }
 
 }
 
@@ -512,6 +541,7 @@ fieldset {
     background: var(--clr-dark);
     color: white;
     transition: all 0.5s ease;
+    background-image: url(/img/port2.png);
   }
   
   .nav__list{
@@ -551,7 +581,7 @@ fieldset {
     left: 150%;
     right: 150%;
     display: block;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-light);
     transition: all ease-in-out .2s;
   }
   .nav__link:hover::after{
@@ -590,6 +620,11 @@ fieldset {
     grid-column-gap: 1em;
     grid-template-columns: 1fr 1fr;
     margin: 0em 7%;
+  }
+
+  .about-me__body p {
+    font-size: 1.3em;
+    margin: 1em;
   }
 
   .skill-sub{
