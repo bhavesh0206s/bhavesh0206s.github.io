@@ -49,7 +49,7 @@ html{
 /* General styles */
 
 body {
-  background-image: url(/img/back.png);
+  background-image: url(/img/back0.png);
   background-size: cover;
   background-color: var(--clr-light);
   background-repeat: no-repeat;
@@ -183,7 +183,7 @@ h3 { font-size: var(--fs-h3) }
   background-image: url(/img/port2.png);
   z-index: 10;
   padding: 0.5rem 1.5em;
-  background-color: var(--clr-light);
+  background-color: rgb(250, 250, 250);
   position: relative;
   /* color: var(--clr-light); */
   box-shadow: var(--bs);
@@ -225,7 +225,7 @@ h3 { font-size: var(--fs-h3) }
   background-image: url(/img/port2.png);
   z-index: 10;
   padding: 0.5rem 1.5em;
-  /* background-color: var(--clr-dark); */
+  background-color: rgb(250, 250, 250);
   position: relative;
   /* color: var(--clr-light); */
   box-shadow: var(--bs);
