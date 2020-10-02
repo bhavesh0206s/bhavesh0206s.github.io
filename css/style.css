@@ -50,7 +50,7 @@ html{
 
 body {
   background-image: url(/img/back0.png);
-  background-size: cover;
+  /* background-size: cover; */
   background-color: var(--clr-light);
   background-repeat: no-repeat;
   color: var(--clr-dark);
