@@ -132,6 +132,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 
+
 /*  Intro section  */
 
 .intro {
@@ -141,6 +142,81 @@ h3 { font-size: var(--fs-h3) }
   margin-top: 10em;
 }
 
+#name{
+  margin-top: 0.3em;
+}
+
+#name path:nth-child(2){
+  stroke-dasharray: 366.3px;
+  stroke-dashoffset: 366.3px;
+  animation: line-anim 2.5s ease forwards 0.3s;
+}
+#name path:nth-child(3){
+  stroke-dasharray: 386.9px;
+  stroke-dashoffset: 386.9px;
+  animation: line-anim 2.5s ease forwards 0.3s;
+}
+#name path:nth-child(4){
+  stroke-dasharray: 420.9px;
+  stroke-dashoffset: 420.9px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(5){
+  stroke-dasharray: 342.2px;
+  stroke-dashoffset: 342.2px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(6){
+  stroke-dasharray: 363.1px;
+  stroke-dashoffset: 363.1px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(7){
+  stroke-dasharray: 296.4px;
+  stroke-dashoffset: 296.4px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(8){
+  stroke-dasharray: 386.9px;
+  stroke-dashoffset: 386.9px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(9){
+  stroke-dasharray: 296.4px;
+  stroke-dashoffset: 296.4px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(10){
+  stroke-dasharray: 428.8px;
+  stroke-dashoffset: 428.8px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(11){
+  stroke-dasharray: 254.5px;
+  stroke-dashoffset: 254.5px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(12){
+  stroke-dasharray: 386.9px;
+  stroke-dashoffset: 386.9px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(13){
+  stroke-dasharray: 420.9px;
+  stroke-dashoffset: 420.9px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#name path:nth-child(14){
+  stroke-dasharray: 370.2px;
+  stroke-dashoffset: 370.2px;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+
+@keyframes line-anim{
+  to{
+    stroke-dashoffset: 0px;
+  }
+}
 
 .section__subtitle--intro {
   display: inline-block;
@@ -183,7 +259,7 @@ h3 { font-size: var(--fs-h3) }
   background-image: url(/img/port2.png);
   z-index: 10;
   padding: 0.5rem 1.5em;
-  background-color: rgb(250, 250, 250);
+  /* background-color: rgb(250, 250, 250); */
   position: relative;
   /* color: var(--clr-light); */
   box-shadow: var(--bs);
@@ -225,9 +301,7 @@ h3 { font-size: var(--fs-h3) }
   background-image: url(/img/port2.png);
   z-index: 10;
   padding: 0.5rem 1.5em;
-  background-color: rgb(250, 250, 250);
   position: relative;
-  /* color: var(--clr-light); */
   box-shadow: var(--bs);
   border-radius: 1em;
 }
@@ -258,6 +332,7 @@ h3 { font-size: var(--fs-h3) }
 
 
 .portfolio__img{
+  position: relative;
   width: auto;
   height: auto;
 }
@@ -289,11 +364,14 @@ h3 { font-size: var(--fs-h3) }
   padding: 1rem 2em;
   background-color: white;
   position: relative;
-  margin: -4em 0.5em 0em 0.5em;
+  margin: -5em 0.5em 0em 0.5em;
   box-shadow: var(--bs);
   border-radius: 1em;
   background-image: url(/img/port2.png);
-  /* background-color: var(--clr-dark); */
+}
+
+.portfolio_subsection p{
+  padding: 0.6em 0;
 }
 
 .portfolio__btn{
@@ -311,7 +389,7 @@ h3 { font-size: var(--fs-h3) }
 
 .portfolio__btn:hover{
   cursor: pointer;
-  background-color: var(--clr-dark); /* Green */
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,33,63,1) 51%, rgba(14,97,115,1) 100%);
   border: 1px solid var(--clr-light);
   color: var(--clr-light);
 }
@@ -319,11 +397,9 @@ h3 { font-size: var(--fs-h3) }
 #contact {
   width: 100%;
   margin: 0 auto;
-  background: var(--clr-light);
   padding: 2em;
   margin: 2em 0;
   box-shadow: var(--bs);
-  /* box-shadow: var(--bs); */
   border-radius: 1em;
   background-image: url(/img/port2.png);
 }
@@ -500,7 +576,6 @@ fieldset {
     z-index: 99;
     transform-origin: 0% 0%;
     background-color: var(--clr-dark);
-    background-image: url(/img/port2.png);
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
@@ -510,6 +585,15 @@ fieldset {
     font-size: var(--fs-h2);
     padding-bottom: 0.2em;
     color: var(--clr-light);
+  }
+
+  .intro{
+    margin-top: 6em;
+  }
+
+  #name{
+    width: 100%;
+    margin: 0;
   }
 
   .skill-sub{
@@ -534,14 +618,16 @@ fieldset {
     top: 0;
     width: 100%;
     overflow: hidden;
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+    0.125em 0.125em 0.25em rgba(0,0,0,.15);
     z-index: 100;
   }
 
   .nav--color{
-    background: var(--clr-dark);
+    /* background: rgb(2,0,36); */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,33,63,1) 51%, rgba(14,97,115,1) 100%);
     color: white;
     transition: all 0.5s ease;
-    background-image: url(/img/port2.png);
   }
   
   .nav__list{
@@ -653,10 +739,10 @@ fieldset {
   .portfolio_subsection{
     position: absolute;
     z-index: 10;
-    padding: 1rem 2em;
+    padding: 1rem 1.5em;
     background-color: white;
     position: relative;
-    margin: -4em 2em 0em 2em
+    margin: -8em 0em 0em 3em
   }
 
   /* contact-me */
