@@ -405,6 +405,7 @@ h3 { font-size: var(--fs-h3) }
   box-shadow: var(--bs);
   border-radius: 1em;
   background-image: url(/img/port2.png);
+  background-color: white;
 }
 
 #contact p{
@@ -712,7 +713,7 @@ fieldset {
   }
 
   .about-me__body p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin: 1em;
   }
 
