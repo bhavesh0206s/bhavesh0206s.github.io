@@ -7,11 +7,11 @@ window.addEventListener("load", function (event) {
   let resumeEle = document.querySelector('.nav__link--resume');
   let navToggleEle = document.querySelector('.nav-toggle');
   let navEle = document.querySelector('.nav');
+  let navLinks = document.querySelectorAll('.nav__link');
   let hamburger = document.querySelectorAll('.hamburger');
 
   let path = window.location.pathname;
   let page = path.split("/").pop();
-
 
   window.addEventListener('scroll', () =>{
     let yheight = window.scrollY;
@@ -21,8 +21,17 @@ window.addEventListener("load", function (event) {
     });
     if(yheight > 40){
       navEle.classList.add('nav--color');
+      navLinks.forEach(navLink => {
+        navLink.classList.remove('nav__link-dark');
+        navLink.classList.add('nav__link-light');
+      });
     }else{
       navEle.classList.remove('nav--color');
+
+      navLinks.forEach(navLink => {
+        navLink.classList.remove('nav__link-light');
+        navLink.classList.add('nav__link-dark');
+      });
     }
   })
 

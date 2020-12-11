@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 *,
 *::before,
 *::after {
@@ -21,19 +22,14 @@ html{
   
   --clr-light: #fff;
   --clr-dark: #00213F;
-  --clr-accent:linear-gradient(
-    to right,
-    #29ffc6,
-    #20e3b2,
-    #0cebeb
-  );
+  --clr-accent:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,33,63,1) 51%, rgba(14,97,115,1) 100%);
   
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
   /* --bs: rgba(0, 0, 0, 0.15) 0px 2px 8px; */
-  --bs: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  --bs: rgba(50, 50, 93, 0.4) 0px 50px 100px -20px, rgba(0, 0, 0, 0.9) 0px 30px 60px -30px;
   /* --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
         0.125em 0.125em 0.25em rgba(0,0,0,.15); */
 }
@@ -263,9 +259,13 @@ h3 { font-size: var(--fs-h3) }
   padding: 0.5rem 1.5em;
   background-color: var(--clr-light);
   position: relative;
-  /* color: var(--clr-light); */
-  box-shadow: var(--bs);
   border-radius: 1em;
+  transition: all ease-in-out .3s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.about-me__body:hover{
+  box-shadow: var(--bs);
 }
 
 .about-me__body p {
@@ -304,9 +304,14 @@ h3 { font-size: var(--fs-h3) }
   z-index: 10;
   padding: 0.5rem 1.5em;
   position: relative;
-  box-shadow: var(--bs);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   background-color: var(--clr-light);
   border-radius: 1em;
+  transition: all ease-in-out .3s;
+}
+
+.skill_subsection:hover{
+  box-shadow: var(--bs);
 }
 
 .skill_subsection h3{
@@ -368,9 +373,15 @@ h3 { font-size: var(--fs-h3) }
   background-color: white;
   position: relative;
   margin: -5em 0.5em 0em 0.5em;
-  box-shadow: var(--bs);
+  transition: all ease-in-out .3s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border-radius: 1em;
   background-image: url(/img/port2.png);
+}
+
+.portfolio_subsection:hover{
+  box-shadow: var(--bs);
+  transform: scale(1.05);
 }
 
 .portfolio_subsection p{
@@ -392,7 +403,7 @@ h3 { font-size: var(--fs-h3) }
 
 .portfolio__btn:hover{
   cursor: pointer;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,33,63,1) 51%, rgba(14,97,115,1) 100%);
+  background: var(--clr-accent);
   border: 1px solid var(--clr-light);
   color: var(--clr-light);
 }
@@ -402,10 +413,15 @@ h3 { font-size: var(--fs-h3) }
   margin: 0 auto;
   padding: 2em;
   margin: 2em 0;
-  box-shadow: var(--bs);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: all ease-in-out .3s;
   border-radius: 1em;
   background-image: url(/img/port2.png);
   background-color: white;
+}
+
+#contact:hover {
+  box-shadow: var(--bs);
 }
 
 #contact p{
@@ -579,7 +595,7 @@ fieldset {
     height: 100vh;
     z-index: 99;
     transform-origin: 0% 0%;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,33,63,1) 51%, rgba(14,97,115,1) 100%);
+    background: var(--clr-accent);
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
@@ -629,7 +645,7 @@ fieldset {
 
   .nav--color{
     /* background: rgb(2,0,36); */
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,33,63,1) 51%, rgba(14,97,115,1) 100%);
+    background: var(--clr-accent);
     color: white;
     transition: all 0.5s ease;
   }
@@ -663,7 +679,7 @@ fieldset {
     font-weight: 700;
   }
   
-  .nav__link::after{
+  .nav__link-light::after{
     content: '';
     position: absolute;
     width: 0px;
@@ -674,7 +690,23 @@ fieldset {
     background-color: var(--clr-light);
     transition: all ease-in-out .2s;
   }
-  .nav__link:hover::after{
+
+  .nav__link-dark::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    left: 150%;
+    right: 150%;
+    display: block;
+    background-color: var(--clr-dark);
+    transition: all ease-in-out .2s;
+  }
+  .nav__link-light:hover::after{
+    width: 100%;
+    left: 0;
+  }
+  .nav__link-dark:hover::after{
     width: 100%;
     left: 0;
   }
@@ -696,6 +728,7 @@ fieldset {
   
   .section__subtitle--intro {
     align-self: start;
+    color: var(--clr-light);
     grid-column: -1 / 1;
     grid-row: 2;
     text-align: right;
