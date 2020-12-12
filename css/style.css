@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 *,
 *::before,
 *::after {
@@ -218,6 +218,7 @@ h3 { font-size: var(--fs-h3) }
 
 .section__subtitle--intro {
   display: inline-block;
+  color: var(--clr-light);
 }
 
 .social-list{
